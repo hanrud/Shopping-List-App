@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping list</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h2>My Shopping List</h2>
+    <div ng-app="myShoppingList" ng-controller="listCtrl">
+        <ul>
+        <li ng-repeat="product in products">{{ product }}</li>
+        </ul>
+    </div>
+</body>
+</html>
