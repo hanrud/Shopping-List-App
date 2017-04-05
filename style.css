@@ -1,0 +1,53 @@
+body {
+    padding: 100px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.container {
+    background-color: #ECF0F1;
+    padding: 50px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+li {
+    font-size: 1.6em;
+    padding: 20px;
+}
+
+span.remove {
+    font-size: 1.6em;
+    color: #EF8B80;
+}
+
+span.remove:hover {
+    cursor: pointer;
+    color: #D62C1A;
+}
+
+div.row input {
+    width: 100%;
+    font-size: 1.6em;
+    padding: 20px;
+    margin: 20px 0 5px;
+}
+
+.btn {
+    width: 100%;
+    background-color: #69D3BF;
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #18BC9C;
+    color: #fff;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.4em;
+}

@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping list</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+    <link type="text/css" href="style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
-    <h2>My Shopping List</h2>
-    <div ng-app="myShoppingList" ng-controller="listCtrl">
-        <ul>
-        <li ng-repeat="product in products">{{ product }}
-        <span ng-click="removeProduct($index)">&times;</span></li>
-        </ul>
-        <input ng-model="addItem">
-        <button ng-click="addProduct()">Add product</button>
-        <p>{{ errortext }}</p>
+<div ng-app="myShoppingList" ng-controller="listCtrl">
+    <div class="container col-xs-12 col-lg-6 col-lg-offset-3 ">
+        <div class="row">
+            <h2>My Shopping List</h2>
+        </div>
+        <div class="row">
+            <ul class="list-group">
+                <li ng-repeat="product in products" class="list-group-item">{{ product }}
+                    <span ng-click="removeProduct($index)" class="remove">&times;</span></li>
+            </ul>
+        </div>
+        <div class="row">
+            <input ng-model="addItem" type="text" class="form-control form-lg" placeholder="Add item here">
+            <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add product</button>
+
+        </div>
+        <div class="row">
+            <p>{{ errortext }}</p>
+        </div>
     </div>
+</div>
 </body>
 </html>
