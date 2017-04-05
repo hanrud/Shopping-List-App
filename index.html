@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div class="row">
-            <input ng-model="addItem" type="text" class="form-control form-lg" placeholder="Add item here">
+            <input ng-model="addItem" ng-keypress="pressed($event,newItem)" type="text" class="form-control form-lg" placeholder="Add item here">
             <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add product</button>
 
         </div>
