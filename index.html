@@ -10,33 +10,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <script src="app.js"></script>
 </head>
-<body>
-<div ng-app="myShoppingList" ng-controller="listCtrl">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                <h2>My Shopping List</h2>
-            </div>
+<body ng-app="myShoppingList">
+<div ng-controller="listCtrl" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <h2>My Shopping List</h2>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                <ul class="list-group">
-                    <li ng-repeat="product in products" class="list-group-item">{{ product }}
-                        <span ng-click="removeProduct($index)" class="remove">&times;</span></li>
-                </ul>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <ul class="list-group">
+                <li ng-repeat="product in products" class="list-group-item"><span ng-repeat="count in counts">{{ count }}</span>
+                    {{ product }}
+                    <span ng-click="removeProduct($index)" class="remove">&times;</span></li>
+            </ul>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                <input ng-model="addItem" ng-keypress="pressed($event,newItem)" type="text" class="form-control form-lg"
-                       placeholder="Add item here">
-                <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add product</button>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <input ng-model="addItem" ng-keypress="pressed($event,newItem)" type="text" class="form-control input-item"
+                   placeholder="Add item here">
+            <input ng-model="addCount" ng-keypress="pressed($event,newItem)" type="text"
+                   class="form-control input-count"
+                   placeholder="How much?">
+            <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add</button>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-                <p>{{ errortext }}</p>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <p>{{ errortext }}</p>
         </div>
     </div>
 </div>

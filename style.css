@@ -35,6 +35,16 @@ div.row input {
     margin: 20px 0 5px;
 }
 
+div.row input.input-item {
+    width: 72%;
+    float: left;
+}
+
+div.row input.input-count{
+    width: 27%;
+    float: right;
+}
+
 .btn {
     width: 100%;
     background-color: #69D3BF;
