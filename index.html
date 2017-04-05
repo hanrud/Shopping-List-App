@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping list</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
@@ -11,23 +12,31 @@
 </head>
 <body>
 <div ng-app="myShoppingList" ng-controller="listCtrl">
-    <div class="container col-xs-12 col-lg-6 col-lg-offset-3 ">
+    <div class="container">
         <div class="row">
-            <h2>My Shopping List</h2>
+            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <h2>My Shopping List</h2>
+            </div>
         </div>
         <div class="row">
-            <ul class="list-group">
-                <li ng-repeat="product in products" class="list-group-item">{{ product }}
-                    <span ng-click="removeProduct($index)" class="remove">&times;</span></li>
-            </ul>
+            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <ul class="list-group">
+                    <li ng-repeat="product in products" class="list-group-item">{{ product }}
+                        <span ng-click="removeProduct($index)" class="remove">&times;</span></li>
+                </ul>
+            </div>
         </div>
         <div class="row">
-            <input ng-model="addItem" ng-keypress="pressed($event,newItem)" type="text" class="form-control form-lg" placeholder="Add item here">
-            <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add product</button>
-
+            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <input ng-model="addItem" ng-keypress="pressed($event,newItem)" type="text" class="form-control form-lg"
+                       placeholder="Add item here">
+                <button ng-click="addProduct()" type="button" class="btn btn-default btn-lg">Add product</button>
+            </div>
         </div>
         <div class="row">
-            <p>{{ errortext }}</p>
+            <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                <p>{{ errortext }}</p>
+            </div>
         </div>
     </div>
 </div>

@@ -1,21 +1,21 @@
 body {
-    padding: 100px;
     font-family: 'Shadows Into Light Two', cursive;
+    background-color: #ECF0F1;
 }
 
 .container {
-    background-color: #ECF0F1;
     padding: 50px;
+    margin-top: 30px;
 }
 
 h2 {
     font-size: 2.5em;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 li {
     font-size: 1.6em;
-    padding: 20px;
 }
 
 span.remove {
@@ -29,7 +29,7 @@ span.remove:hover {
 }
 
 div.row input {
-    width: 100%;
+
     font-size: 1.6em;
     padding: 20px;
     margin: 20px 0 5px;
